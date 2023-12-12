@@ -1,5 +1,0 @@
-db:
-  host: db-postgresql
-  user: rails
-  password: password 
-  database: ads_microservise_development

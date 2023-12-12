@@ -1,6 +1,0 @@
-db:
-  host: db-postgresql
-  user: rails
-  password: password 
-  database: ads_microservise_test
-  max_connections: 1

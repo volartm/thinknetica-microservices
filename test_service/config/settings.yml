@@ -1,4 +1,0 @@
-db:
-  adapter: postgresql
-pagination:
-  page_size: 10

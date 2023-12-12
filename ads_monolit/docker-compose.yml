@@ -1,0 +1,16 @@
+version: "3"
+services:
+  ads_app:
+    extends:
+      file: ../composer-files/docker-compose.common_services.yml
+      service: app
+    environment:
+      WEB_SCOKET_URL: 'ws://0.0.0.0:4335/ws'
+    ports:
+      - "127.0.0.1:4000:5000"
+      - '4335:3035'
+    env_file:
+      - ../ads_monolit/.env
+    volumes:
+      - ../ads_monolit/:/app
+      - ../ads_monolit/public/:/app/public

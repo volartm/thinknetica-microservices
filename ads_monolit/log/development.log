@@ -1,0 +1,1641 @@
+  [1m[35m (85.6ms)[0m  [1m[35mCREATE DATABASE "ads_monolit_development" ENCODING = 'unicode' TEMPLATE = "template0"[0m
+  [1m[35m (35.5ms)[0m  [1m[35mCREATE DATABASE "ads_monolit_test" ENCODING = 'unicode' TEMPLATE = "template0"[0m
+Started GET "/" for 172.18.0.1 at 2023-12-02 20:29:12 +0000
+  
+ActiveRecord::NoDatabaseError (We could not find your database: ads_monolit_development. Available database configurations can be found in config/database.yml file.
+
+To resolve this error:
+
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+
+To create your database, run:
+
+        bin/rails db:create
+):
+  
+activerecord (7.1.2) lib/active_record/connection_adapters/postgresql_adapter.rb:74:in `rescue in new_client'
+activerecord (7.1.2) lib/active_record/connection_adapters/postgresql_adapter.rb:68:in `new_client'
+activerecord (7.1.2) lib/active_record/connection_adapters/postgresql_adapter.rb:980:in `connect'
+activerecord (7.1.2) lib/active_record/connection_adapters/postgresql_adapter.rb:992:in `reconnect'
+activerecord (7.1.2) lib/active_record/connection_adapters/abstract_adapter.rb:685:in `block in reconnect!'
+activesupport (7.1.2) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.2) lib/active_record/connection_adapters/abstract_adapter.rb:684:in `reconnect!'
+activerecord (7.1.2) lib/active_record/connection_adapters/abstract_adapter.rb:788:in `verify!'
+activerecord (7.1.2) lib/active_record/connection_adapters/abstract_adapter.rb:795:in `connect!'
+activerecord (7.1.2) lib/active_record/connection_adapters/abstract_adapter.rb:1001:in `block in with_raw_connection'
+activesupport (7.1.2) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.2) lib/active_record/connection_adapters/abstract_adapter.rb:1000:in `with_raw_connection'
+activerecord (7.1.2) lib/active_record/connection_adapters/abstract_adapter.rb:1113:in `valid_raw_connection'
+activerecord (7.1.2) lib/active_record/connection_adapters/postgresql_adapter.rb:616:in `get_database_version'
+activerecord (7.1.2) lib/active_record/connection_adapters/schema_cache.rb:374:in `database_version'
+activerecord (7.1.2) lib/active_record/connection_adapters/schema_cache.rb:70:in `database_version'
+activerecord (7.1.2) lib/active_record/connection_adapters/schema_cache.rb:200:in `database_version'
+activerecord (7.1.2) lib/active_record/connection_adapters/abstract_adapter.rb:871:in `database_version'
+activerecord (7.1.2) lib/active_record/connection_adapters/postgresql_adapter.rb:644:in `check_version'
+activerecord (7.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:675:in `new_connection'
+activerecord (7.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:720:in `checkout_new_connection'
+activerecord (7.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:699:in `try_to_checkout_new_connection'
+activerecord (7.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:657:in `acquire_connection'
+activerecord (7.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `checkout'
+activerecord (7.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `connection'
+activerecord (7.1.2) lib/active_record/migration/pending_migration_connection.rb:8:in `establish_temporary_connection'
+activerecord (7.1.2) lib/active_record/migration.rb:773:in `block in pending_migrations'
+activerecord (7.1.2) lib/active_record/migration.rb:772:in `each'
+activerecord (7.1.2) lib/active_record/migration.rb:772:in `pending_migrations'
+activerecord (7.1.2) lib/active_record/migration.rb:751:in `check_pending_migrations'
+activerecord (7.1.2) lib/active_record/migration.rb:643:in `block (2 levels) in call'
+activesupport (7.1.2) lib/active_support/evented_file_update_checker.rb:63:in `execute'
+activerecord (7.1.2) lib/active_record/migration.rb:648:in `block in call'
+activerecord (7.1.2) lib/active_record/migration.rb:640:in `synchronize'
+activerecord (7.1.2) lib/active_record/migration.rb:640:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.2) lib/rails/engine.rb:529:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/favicon.ico" for 172.18.0.1 at 2023-12-02 20:29:13 +0000
+  
+ActiveRecord::NoDatabaseError (We could not find your database: ads_monolit_development. Available database configurations can be found in config/database.yml file.
+
+To resolve this error:
+
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+
+To create your database, run:
+
+        bin/rails db:create
+):
+  
+activerecord (7.1.2) lib/active_record/connection_adapters/postgresql_adapter.rb:74:in `rescue in new_client'
+activerecord (7.1.2) lib/active_record/connection_adapters/postgresql_adapter.rb:68:in `new_client'
+activerecord (7.1.2) lib/active_record/connection_adapters/postgresql_adapter.rb:980:in `connect'
+activerecord (7.1.2) lib/active_record/connection_adapters/postgresql_adapter.rb:992:in `reconnect'
+activerecord (7.1.2) lib/active_record/connection_adapters/abstract_adapter.rb:685:in `block in reconnect!'
+activesupport (7.1.2) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.2) lib/active_record/connection_adapters/abstract_adapter.rb:684:in `reconnect!'
+activerecord (7.1.2) lib/active_record/connection_adapters/abstract_adapter.rb:788:in `verify!'
+activerecord (7.1.2) lib/active_record/connection_adapters/abstract_adapter.rb:795:in `connect!'
+activerecord (7.1.2) lib/active_record/connection_adapters/abstract_adapter.rb:1001:in `block in with_raw_connection'
+activesupport (7.1.2) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.2) lib/active_record/connection_adapters/abstract_adapter.rb:1000:in `with_raw_connection'
+activerecord (7.1.2) lib/active_record/connection_adapters/abstract_adapter.rb:1113:in `valid_raw_connection'
+activerecord (7.1.2) lib/active_record/connection_adapters/postgresql_adapter.rb:616:in `get_database_version'
+activerecord (7.1.2) lib/active_record/connection_adapters/schema_cache.rb:374:in `database_version'
+activerecord (7.1.2) lib/active_record/connection_adapters/schema_cache.rb:70:in `database_version'
+activerecord (7.1.2) lib/active_record/connection_adapters/schema_cache.rb:200:in `database_version'
+activerecord (7.1.2) lib/active_record/connection_adapters/abstract_adapter.rb:871:in `database_version'
+activerecord (7.1.2) lib/active_record/connection_adapters/postgresql_adapter.rb:644:in `check_version'
+activerecord (7.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:675:in `new_connection'
+activerecord (7.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:720:in `checkout_new_connection'
+activerecord (7.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:699:in `try_to_checkout_new_connection'
+activerecord (7.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:657:in `acquire_connection'
+activerecord (7.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `checkout'
+activerecord (7.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `connection'
+activerecord (7.1.2) lib/active_record/migration/pending_migration_connection.rb:8:in `establish_temporary_connection'
+activerecord (7.1.2) lib/active_record/migration.rb:773:in `block in pending_migrations'
+activerecord (7.1.2) lib/active_record/migration.rb:772:in `each'
+activerecord (7.1.2) lib/active_record/migration.rb:772:in `pending_migrations'
+activerecord (7.1.2) lib/active_record/migration.rb:751:in `check_pending_migrations'
+activerecord (7.1.2) lib/active_record/migration.rb:643:in `block (2 levels) in call'
+activesupport (7.1.2) lib/active_support/evented_file_update_checker.rb:63:in `execute'
+activerecord (7.1.2) lib/active_record/migration.rb:648:in `block in call'
+activerecord (7.1.2) lib/active_record/migration.rb:640:in `synchronize'
+activerecord (7.1.2) lib/active_record/migration.rb:640:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.2) lib/rails/engine.rb:529:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (43.0ms)[0m  [1m[35mCREATE DATABASE "ads_monolit_development" ENCODING = 'unicode' TEMPLATE = "template0"[0m
+  [1m[35m (36.1ms)[0m  [1m[35mCREATE DATABASE "ads_monolit_test" ENCODING = 'unicode' TEMPLATE = "template0"[0m
+Started GET "/" for 172.18.0.1 at 2023-12-02 20:29:43 +0000
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 3 pending migrations:
+
+db/migrate/20200510225955_create_users.rb
+db/migrate/20200511142207_create_user_sessions.rb
+db/migrate/20200511163412_create_ads.rb
+
+
+):
+  
+activerecord (7.1.2) lib/active_record/migration.rb:754:in `check_pending_migrations'
+activerecord (7.1.2) lib/active_record/migration.rb:643:in `block (2 levels) in call'
+activesupport (7.1.2) lib/active_support/evented_file_update_checker.rb:63:in `execute'
+activerecord (7.1.2) lib/active_record/migration.rb:648:in `block in call'
+activerecord (7.1.2) lib/active_record/migration.rb:640:in `synchronize'
+activerecord (7.1.2) lib/active_record/migration.rb:640:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.2) lib/rails/engine.rb:529:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/favicon.ico" for 172.18.0.1 at 2023-12-02 20:29:43 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 3 pending migrations:
+
+db/migrate/20200510225955_create_users.rb
+db/migrate/20200511142207_create_user_sessions.rb
+db/migrate/20200511163412_create_ads.rb
+
+
+):
+  
+activerecord (7.1.2) lib/active_record/migration.rb:754:in `check_pending_migrations'
+activerecord (7.1.2) lib/active_record/migration.rb:643:in `block (2 levels) in call'
+activesupport (7.1.2) lib/active_support/evented_file_update_checker.rb:63:in `execute'
+activerecord (7.1.2) lib/active_record/migration.rb:648:in `block in call'
+activerecord (7.1.2) lib/active_record/migration.rb:640:in `synchronize'
+activerecord (7.1.2) lib/active_record/migration.rb:640:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.2) lib/rails/engine.rb:529:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4141235573520427725)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (2.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2023-12-02 20:29:53.229928', '2023-12-02 20:29:53.229932') RETURNING "key"[0m
+Migrating to CreateUsers (20200510225955)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (9.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "citext"[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying NOT NULL, "email" citext NOT NULL, "password_digest" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20200510225955') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUserSessions (20200511142207)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "user_sessions" ("id" bigserial primary key, "uuid" uuid NOT NULL, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_9fa262d742"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE INDEX "index_user_sessions_on_uuid" ON "user_sessions" ("uuid")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE INDEX "index_user_sessions_on_user_id" ON "user_sessions" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20200511142207') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateAds (20200511163412)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "ads" ("id" bigserial primary key, "title" character varying NOT NULL, "description" text NOT NULL, "city" character varying NOT NULL, "lat" float, "lon" float, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_400d8fa7ce"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE INDEX "index_ads_on_user_id" ON "ads" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20200511163412') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4141235573520427725)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 172.18.0.1 at 2023-12-02 20:30:00 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdsController#index as HTML
+  [1m[36mAd Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "ads"[0m
+  ↳ app/controllers/concerns/pagination_links.rb:3:in `pagination_links'
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads" ORDER BY "ads"."updated_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/controllers/ads_controller.rb:10:in `index'
+Completed 200 OK in 49ms (Views: 0.1ms | ActiveRecord: 9.3ms | Allocations: 18334)
+
+
+Started GET "/favicon.ico" for 172.18.0.1 at 2023-12-02 20:30:00 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/" for 172.19.0.1 at 2023-12-02 20:33:08 +0000
+  
+ActiveRecord::NoDatabaseError (We could not find your database: ads_monolit_development. Available database configurations can be found in config/database.yml file.
+
+To resolve this error:
+
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+
+To create your database, run:
+
+        bin/rails db:create
+):
+  
+activerecord (7.1.2) lib/active_record/connection_adapters/postgresql_adapter.rb:74:in `rescue in new_client'
+activerecord (7.1.2) lib/active_record/connection_adapters/postgresql_adapter.rb:68:in `new_client'
+activerecord (7.1.2) lib/active_record/connection_adapters/postgresql_adapter.rb:980:in `connect'
+activerecord (7.1.2) lib/active_record/connection_adapters/postgresql_adapter.rb:992:in `reconnect'
+activerecord (7.1.2) lib/active_record/connection_adapters/abstract_adapter.rb:685:in `block in reconnect!'
+activesupport (7.1.2) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.2) lib/active_record/connection_adapters/abstract_adapter.rb:684:in `reconnect!'
+activerecord (7.1.2) lib/active_record/connection_adapters/abstract_adapter.rb:788:in `verify!'
+activerecord (7.1.2) lib/active_record/connection_adapters/abstract_adapter.rb:795:in `connect!'
+activerecord (7.1.2) lib/active_record/connection_adapters/abstract_adapter.rb:1001:in `block in with_raw_connection'
+activesupport (7.1.2) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.2) lib/active_record/connection_adapters/abstract_adapter.rb:1000:in `with_raw_connection'
+activerecord (7.1.2) lib/active_record/connection_adapters/abstract_adapter.rb:1113:in `valid_raw_connection'
+activerecord (7.1.2) lib/active_record/connection_adapters/postgresql_adapter.rb:616:in `get_database_version'
+activerecord (7.1.2) lib/active_record/connection_adapters/schema_cache.rb:374:in `database_version'
+activerecord (7.1.2) lib/active_record/connection_adapters/schema_cache.rb:70:in `database_version'
+activerecord (7.1.2) lib/active_record/connection_adapters/schema_cache.rb:200:in `database_version'
+activerecord (7.1.2) lib/active_record/connection_adapters/abstract_adapter.rb:871:in `database_version'
+activerecord (7.1.2) lib/active_record/connection_adapters/postgresql_adapter.rb:644:in `check_version'
+activerecord (7.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:675:in `new_connection'
+activerecord (7.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:720:in `checkout_new_connection'
+activerecord (7.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:699:in `try_to_checkout_new_connection'
+activerecord (7.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:657:in `acquire_connection'
+activerecord (7.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `checkout'
+activerecord (7.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `connection'
+activerecord (7.1.2) lib/active_record/migration/pending_migration_connection.rb:8:in `establish_temporary_connection'
+activerecord (7.1.2) lib/active_record/migration.rb:773:in `block in pending_migrations'
+activerecord (7.1.2) lib/active_record/migration.rb:772:in `each'
+activerecord (7.1.2) lib/active_record/migration.rb:772:in `pending_migrations'
+activerecord (7.1.2) lib/active_record/migration.rb:751:in `check_pending_migrations'
+activerecord (7.1.2) lib/active_record/migration.rb:643:in `block (2 levels) in call'
+activesupport (7.1.2) lib/active_support/evented_file_update_checker.rb:63:in `execute'
+activerecord (7.1.2) lib/active_record/migration.rb:648:in `block in call'
+activerecord (7.1.2) lib/active_record/migration.rb:640:in `synchronize'
+activerecord (7.1.2) lib/active_record/migration.rb:640:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.2) lib/rails/engine.rb:529:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (40.7ms)[0m  [1m[35mCREATE DATABASE "ads_monolit_development" ENCODING = 'unicode' TEMPLATE = "template0"[0m
+  [1m[35m (36.8ms)[0m  [1m[35mCREATE DATABASE "ads_monolit_test" ENCODING = 'unicode' TEMPLATE = "template0"[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4141235573520427725)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2023-12-02 20:33:26.797860', '2023-12-02 20:33:26.797864') RETURNING "key"[0m
+Migrating to CreateUsers (20200510225955)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (14.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "citext"[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying NOT NULL, "email" citext NOT NULL, "password_digest" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20200510225955') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUserSessions (20200511142207)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "user_sessions" ("id" bigserial primary key, "uuid" uuid NOT NULL, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_9fa262d742"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE INDEX "index_user_sessions_on_uuid" ON "user_sessions" ("uuid")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE INDEX "index_user_sessions_on_user_id" ON "user_sessions" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20200511142207') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateAds (20200511163412)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "ads" ("id" bigserial primary key, "title" character varying NOT NULL, "description" text NOT NULL, "city" character varying NOT NULL, "lat" float, "lon" float, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_400d8fa7ce"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE INDEX "index_ads_on_user_id" ON "ads" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20200511163412') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4141235573520427725)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 172.19.0.1 at 2023-12-02 20:33:33 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdsController#index as HTML
+  [1m[36mAd Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "ads"[0m
+  ↳ app/controllers/concerns/pagination_links.rb:3:in `pagination_links'
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads" ORDER BY "ads"."updated_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/controllers/ads_controller.rb:10:in `index'
+Completed 200 OK in 49ms (Views: 0.2ms | ActiveRecord: 8.4ms | Allocations: 18340)
+
+
+Started GET "/" for 172.19.0.1 at 2023-12-11 12:52:16 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdsController#index as */*
+  [1m[36mAd Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "ads"[0m
+  ↳ app/controllers/concerns/pagination_links.rb:3:in `pagination_links'
+  [1m[36mAd Load (0.3ms)[0m  [1m[34mSELECT "ads".* FROM "ads" ORDER BY "ads"."updated_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/controllers/ads_controller.rb:10:in `index'
+Completed 200 OK in 44ms (Views: 0.2ms | ActiveRecord: 10.8ms | Allocations: 14600)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (6.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Bob"], ["email", "bob@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-12-11 12:52:48.439533"], ["updated_at", "2023-12-11 12:52:48.439533"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAd Create (3.0ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "city", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Ad title 1"], ["description", "Ad description 1"], ["city", "City 1"], ["user_id", 1], ["created_at", "2023-12-11 12:52:48.468002"], ["updated_at", "2023-12-11 12:52:48.468002"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAd Create (1.4ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "city", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Ad title 2"], ["description", "Ad description 2"], ["city", "City 1"], ["user_id", 1], ["created_at", "2023-12-11 12:52:48.475570"], ["updated_at", "2023-12-11 12:52:48.475570"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAd Create (1.4ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "city", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Ad title 3"], ["description", "Ad description 3"], ["city", "City 2"], ["user_id", 1], ["created_at", "2023-12-11 12:52:48.480376"], ["updated_at", "2023-12-11 12:52:48.480376"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 172.19.0.1 at 2023-12-11 12:52:55 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdsController#index as */*
+  [1m[36mAd Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "ads"[0m
+  ↳ app/controllers/concerns/pagination_links.rb:3:in `pagination_links'
+  [1m[36mAd Load (0.3ms)[0m  [1m[34mSELECT "ads".* FROM "ads" ORDER BY "ads"."updated_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/controllers/ads_controller.rb:10:in `index'
+Completed 200 OK in 49ms (Views: 0.1ms | ActiveRecord: 9.9ms | Allocations: 24205)
+
+
+Started POST "/signup" for 172.19.0.1 at 2023-12-11 12:56:18 +0000
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Alice", "email"=>"tes@email.com", "password"=>"[FILTERED]", "user"=>{"name"=>"Alice", "email"=>"tes@email.com"}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/users/create_service.rb:18:in `call'
+  [1m[36mUser Create (3.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Alice"], ["email", "tes@email.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-12-11 12:56:18.460833"], ["updated_at", "2023-12-11 12:56:18.460833"]]
+  ↳ app/services/users/create_service.rb:18:in `call'
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/users/create_service.rb:18:in `call'
+Completed 201 Created in 298ms (ActiveRecord: 13.0ms | Allocations: 7719)
+
+
+Started POST "/login" for 172.19.0.1 at 2023-12-11 12:57:38 +0000
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"test@email.com", "password"=>"[FILTERED]", "session"=>{"email"=>"test@email.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@email.com"], ["LIMIT", 1]]
+  ↳ app/services/user_sessions/create_service.rb:7:in `block in <class:CreateService>'
+Completed 401 Unauthorized in 279ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 160413)
+
+
+Started POST "/signup" for 172.19.0.1 at 2023-12-11 12:58:09 +0000
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Alice", "email"=>"test@email.com", "password"=>"[FILTERED]", "user"=>{"name"=>"Alice", "email"=>"test@email.com"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/users/create_service.rb:18:in `call'
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Alice"], ["email", "test@email.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-12-11 12:58:10.099095"], ["updated_at", "2023-12-11 12:58:10.099095"]]
+  ↳ app/services/users/create_service.rb:18:in `call'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/users/create_service.rb:18:in `call'
+Completed 201 Created in 252ms (ActiveRecord: 2.3ms | Allocations: 1593)
+
+
+Started POST "/login" for 172.19.0.1 at 2023-12-11 12:58:16 +0000
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"test@email.com", "password"=>"[FILTERED]", "session"=>{"email"=>"test@email.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@email.com"], ["LIMIT", 1]]
+  ↳ app/services/user_sessions/create_service.rb:7:in `block in <class:CreateService>'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/user_sessions/create_service.rb:24:in `create_session'
+  [1m[36mUserSession Create (4.0ms)[0m  [1m[32mINSERT INTO "user_sessions" ("uuid", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["user_id", 3], ["created_at", "2023-12-11 12:58:16.401131"], ["updated_at", "2023-12-11 12:58:16.401131"]]
+  ↳ app/services/user_sessions/create_service.rb:24:in `create_session'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/user_sessions/create_service.rb:24:in `create_session'
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+Completed 201 Created in 269ms (Views: 0.1ms | ActiveRecord: 10.6ms | Allocations: 11858)
+
+
+Started POST "/das" for 172.19.0.1 at 2023-12-11 13:02:07 +0000
+  
+ActionController::RoutingError (No route matches [POST] "/das"):
+  
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 13:02:28 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>"Title", "descripotion"=>"Descripotion", "city"=>"Екатеринбург"}
+  [1m[36mUserSession Load (0.4ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:17:in `session'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:11:in `call'
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.7ms | Allocations: 4868)
+
+
+  
+NoMethodError (undefined method `permit' for "Title":String):
+  
+app/controllers/ads_controller.rb:30:in `ad_params'
+app/controllers/ads_controller.rb:15:in `create'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 13:03:52 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "descripotion"=>"Descripotion", "city"=>"Екатеринбург"}}
+  [1m[36mUserSession Load (0.4ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:17:in `session'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:11:in `call'
+[31mUnpermitted parameter: :descripotion. Context: { controller: AdsController, action: create, request: #<ActionDispatch::Request:0x00007f6e74175ab8>, params: {"ad"=>{"title"=>"Title", "descripotion"=>"Descripotion", "city"=>"Екатеринбург"}, "controller"=>"ads", "action"=>"create"} }[0m
+Completed 422 Unprocessable Entity in 5ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 1335)
+
+
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 13:04:11 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "descripotion"=>"Descripotion", "city"=>"Екатеринбург"}}
+  [1m[36mUserSession Load (0.4ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:17:in `session'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:11:in `call'
+[31mUnpermitted parameter: :descripotion. Context: { controller: AdsController, action: create, request: #<ActionDispatch::Request:0x00007f6e741894c8>, params: {"ad"=>{"title"=>"Title", "descripotion"=>"Descripotion", "city"=>"Екатеринбург"}, "controller"=>"ads", "action"=>"create"} }[0m
+Completed 422 Unprocessable Entity in 4ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 1251)
+
+
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 13:04:30 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+  [1m[36mUserSession Load (0.4ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:17:in `session'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:11:in `call'
+Completed 422 Unprocessable Entity in 8ms (Views: 0.3ms | ActiveRecord: 0.8ms | Allocations: 1181)
+
+
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 13:04:55 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+  [1m[36mUserSession Load (0.5ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:17:in `session'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:11:in `call'
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 1166)
+
+
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 13:05:33 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+  [1m[36mUserSession Load (0.6ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:17:in `session'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:11:in `call'
+Completed 422 Unprocessable Entity in 7ms (Views: 0.3ms | ActiveRecord: 1.0ms | Allocations: 1166)
+
+
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 13:05:49 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 893)
+
+
+  
+NoMethodError (undefined method `pry_remote' for #<Binding:0x00007f6e76bdc1d0>):
+  
+app/services/auth/fetch_user_service.rb:17:in `session'
+app/services/auth/fetch_user_service.rb:10:in `call'
+app/services/basic_service.rb:22:in `call'
+app/services/basic_service.rb:4:in `call'
+app/controllers/concerns/auth.rb:14:in `auth_user'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 13:06:42 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+  [1m[36mUserSession Load (0.4ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ (pry):3:in `session'
+  [1m[36mCACHE UserSession Load (0.0ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:18:in `session'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:11:in `call'
+Completed 422 Unprocessable Entity in 97137ms (Views: 0.2ms | ActiveRecord: 13.5ms | Allocations: 93225)
+
+
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 13:08:40 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+  [1m[36mUserSession Load (0.5ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:18:in `session'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ (pry):8:in `call'
+Completed 422 Unprocessable Entity in 41027ms (Views: 0.2ms | ActiveRecord: 12.6ms | Allocations: 46964)
+
+
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 13:09:42 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+  [1m[36mUserSession Load (0.4ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:17:in `session'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:11:in `call'
+  [1m[36mCACHE UserSession Load (0.0ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:17:in `session'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:11:in `call'
+Completed 422 Unprocessable Entity in 24686ms (Views: 0.2ms | ActiveRecord: 11.2ms | Allocations: 44568)
+
+
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 13:10:50 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+  [1m[36mUserSession Load (0.4ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:17:in `session'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:11:in `call'
+Completed 422 Unprocessable Entity in 95957ms (Views: 0.3ms | ActiveRecord: 11.4ms | Allocations: 44703)
+
+
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 13:12:31 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+  [1m[36mUserSession Load (0.4ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:17:in `session'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:11:in `call'
+Completed 422 Unprocessable Entity in 27ms (Views: 0.1ms | ActiveRecord: 11.2ms | Allocations: 10923)
+
+
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 13:14:14 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+  [1m[36mUserSession Load (0.3ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:17:in `session'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:11:in `call'
+Completed 422 Unprocessable Entity in 266696ms (Views: 0.2ms | ActiveRecord: 9.5ms | Allocations: 42787)
+
+
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 13:18:44 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+  [1m[36mUserSession Load (0.2ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:17:in `session'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:11:in `call'
+Completed 422 Unprocessable Entity in 378922ms (Views: 0.3ms | ActiveRecord: 5.0ms | Allocations: 202924)
+
+
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 13:25:08 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+  [1m[36mUserSession Load (0.3ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:17:in `session'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:11:in `call'
+Completed 422 Unprocessable Entity in 26394ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 32323)
+
+
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 13:26:57 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+  [1m[36mUserSession Load (0.3ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:17:in `session'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:11:in `call'
+Completed 422 Unprocessable Entity in 72190ms (Views: 0.3ms | ActiveRecord: 10.7ms | Allocations: 62280)
+
+
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 13:28:17 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 906)
+
+
+  
+TypeError (no implicit conversion of Array into Hash):
+  
+app/services/basic_service.rb:4:in `call'
+app/controllers/concerns/auth.rb:14:in `auth_user'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 13:28:40 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 901)
+
+
+  
+TypeError (no implicit conversion of Array into Hash):
+  
+app/services/basic_service.rb:4:in `call'
+app/controllers/concerns/auth.rb:14:in `auth_user'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 13:29:38 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 902)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/services/basic_service.rb:3:in `call'
+app/controllers/concerns/auth.rb:14:in `auth_user'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 13:30:07 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 908)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/services/basic_service.rb:3:in `call'
+app/controllers/concerns/auth.rb:14:in `auth_user'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 13:30:33 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+  [1m[36mUserSession Load (0.3ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:17:in `session'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:11:in `call'
+Completed 422 Unprocessable Entity in 26ms (Views: 0.1ms | ActiveRecord: 10.4ms | Allocations: 11085)
+
+
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 13:32:05 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+  [1m[36mUserSession Load (0.3ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:17:in `session'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:11:in `call'
+Completed 422 Unprocessable Entity in 25ms (Views: 0.1ms | ActiveRecord: 11.0ms | Allocations: 11009)
+
+
+Started POST "/signup" for 172.19.0.1 at 2023-12-11 13:39:35 +0000
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Alice", "email"=>"test@email.com", "password"=>"[FILTERED]", "user"=>{"name"=>"Alice", "email"=>"test@email.com"}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 4.4ms | Allocations: 967)
+
+
+  
+ArgumentError (wrong number of arguments (given 3, expected 1)):
+  
+app/services/basic_service.rb:3:in `call'
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/signup" for 172.19.0.1 at 2023-12-11 13:39:45 +0000
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Alice", "email"=>"test@email.com", "password"=>"[FILTERED]", "user"=>{"name"=>"Alice", "email"=>"test@email.com"}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 94)
+
+
+  
+ArgumentError (wrong number of arguments (given 3, expected 1)):
+  
+app/services/basic_service.rb:3:in `call'
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/signup" for 172.19.0.1 at 2023-12-11 13:40:07 +0000
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Alice", "email"=>"test@email.com", "password"=>"[FILTERED]", "user"=>{"name"=>"Alice", "email"=>"test@email.com"}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/users/create_service.rb:18:in `call'
+  [1m[36mUser Create (3.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Alice"], ["email", "test@email.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-12-11 13:40:07.964927"], ["updated_at", "2023-12-11 13:40:07.964927"]]
+  ↳ app/services/users/create_service.rb:18:in `call'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/services/users/create_service.rb:18:in `call'
+Completed 422 Unprocessable Entity in 252ms (Views: 0.2ms | ActiveRecord: 11.4ms | Allocations: 6095)
+
+
+Started POST "/signup" for 172.19.0.1 at 2023-12-11 13:40:21 +0000
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Alice", "email"=>"test@email.com", "password"=>"[FILTERED]", "user"=>{"name"=>"Alice", "email"=>"test@email.com"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/users/create_service.rb:18:in `call'
+  [1m[36mUser Create (1.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Alice"], ["email", "test@email.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-12-11 13:40:22.015423"], ["updated_at", "2023-12-11 13:40:22.015423"]]
+  ↳ app/services/users/create_service.rb:18:in `call'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/services/users/create_service.rb:18:in `call'
+Completed 422 Unprocessable Entity in 258ms (Views: 0.1ms | ActiveRecord: 2.1ms | Allocations: 1773)
+
+
+Started POST "/signup" for 172.19.0.1 at 2023-12-11 13:41:09 +0000
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Alice", "email"=>"test@email.com", "password"=>"[FILTERED]", "user"=>{"name"=>"Alice", "email"=>"test@email.com"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/users/create_service.rb:18:in `call'
+  [1m[36mUser Create (1.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Alice"], ["email", "test@email.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-12-11 13:41:09.420815"], ["updated_at", "2023-12-11 13:41:09.420815"]]
+  ↳ app/services/users/create_service.rb:18:in `call'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/services/users/create_service.rb:18:in `call'
+Completed 422 Unprocessable Entity in 247ms (Views: 0.2ms | ActiveRecord: 11.0ms | Allocations: 5456)
+
+
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 13:41:25 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+  [1m[36mUserSession Load (0.5ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:17:in `session'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:11:in `call'
+Completed 422 Unprocessable Entity in 14530ms (Views: 0.3ms | ActiveRecord: 4.8ms | Allocations: 20276)
+
+
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 13:41:54 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+  [1m[36mUserSession Load (0.3ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:17:in `session'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:11:in `call'
+Completed 422 Unprocessable Entity in 27ms (Views: 0.1ms | ActiveRecord: 10.9ms | Allocations: 10794)
+
+
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 13:42:29 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+  [1m[36mUserSession Load (0.4ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:17:in `session'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:11:in `call'
+Completed 422 Unprocessable Entity in 28ms (Views: 0.1ms | ActiveRecord: 11.1ms | Allocations: 10977)
+
+
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 13:42:55 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+  [1m[36mUserSession Load (0.4ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:17:in `session'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:11:in `call'
+Completed 422 Unprocessable Entity in 107682ms (Views: 0.3ms | ActiveRecord: 11.3ms | Allocations: 92821)
+
+
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 13:44:55 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+  [1m[36mUserSession Load (0.3ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:17:in `session'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:11:in `call'
+Completed 422 Unprocessable Entity in 449030ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 60972)
+
+
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 13:52:27 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 907)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/services/basic_service.rb:3:in `call'
+app/controllers/concerns/auth.rb:14:in `auth_user'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 13:53:16 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+  [1m[36mUserSession Load (0.3ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", nil], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:17:in `session'
+Filter chain halted as :auth_user rendered or redirected
+Completed 403 Forbidden in 6298ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 7417)
+
+
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 13:53:28 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+  [1m[36mUserSession Load (0.3ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", nil], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:17:in `session'
+Filter chain halted as :auth_user rendered or redirected
+Completed 403 Forbidden in 61479ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 32097)
+
+
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 15:09:13 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+Completed 500 Internal Server Error in 25656ms (ActiveRecord: 0.0ms | Allocations: 12142)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/services/basic_service.rb:3:in `call'
+app/controllers/concerns/auth.rb:15:in `auth_user'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 15:14:27 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+  [1m[36mUserSession Load (0.4ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:17:in `session'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:11:in `call'
+Completed 500 Internal Server Error in 9244ms (ActiveRecord: 14.0ms | Allocations: 21785)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/services/ads/create_service.rb:17:in `initialize'
+app/services/basic_service.rb:17:in `initialize'
+app/services/basic_service.rb:4:in `new'
+app/services/basic_service.rb:4:in `call'
+app/controllers/ads_controller.rb:14:in `create'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 15:15:15 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+  [1m[36mUserSession Load (0.3ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:17:in `session'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:11:in `call'
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 7.4ms | Allocations: 10693)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/services/ads/create_service.rb:17:in `initialize'
+app/services/basic_service.rb:17:in `initialize'
+app/services/basic_service.rb:4:in `new'
+app/services/basic_service.rb:4:in `call'
+app/controllers/ads_controller.rb:14:in `create'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 15:15:49 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+  [1m[36mUserSession Load (0.4ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:17:in `session'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:11:in `call'
+Completed 500 Internal Server Error in 22462ms (ActiveRecord: 12.5ms | Allocations: 31803)
+
+
+  
+SystemExit (exit):
+  
+app/services/ads/create_service.rb:18:in `initialize'
+app/services/basic_service.rb:17:in `initialize'
+app/services/basic_service.rb:4:in `new'
+app/services/basic_service.rb:4:in `call'
+app/controllers/ads_controller.rb:14:in `create'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 15:18:48 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+  [1m[36mUserSession Load (0.3ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:17:in `session'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:11:in `call'
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 8.7ms | Allocations: 10834)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/services/ads/create_service.rb:17:in `initialize'
+app/services/basic_service.rb:17:in `initialize'
+app/services/ads/create_service.rb:14:in `new'
+app/services/ads/create_service.rb:14:in `call'
+app/controllers/ads_controller.rb:14:in `create'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 15:18:59 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+  [1m[36mUserSession Load (0.4ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:17:in `session'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:11:in `call'
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 10.8ms | Allocations: 10832)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/services/ads/create_service.rb:17:in `initialize'
+app/services/basic_service.rb:17:in `initialize'
+app/services/ads/create_service.rb:14:in `new'
+app/services/ads/create_service.rb:14:in `call'
+app/controllers/ads_controller.rb:14:in `create'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 15:19:43 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+  [1m[36mUserSession Load (0.4ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:17:in `session'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:11:in `call'
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 11.3ms | Allocations: 10794)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/services/ads/create_service.rb:17:in `initialize'
+app/services/basic_service.rb:17:in `initialize'
+app/services/ads/create_service.rb:14:in `new'
+app/services/ads/create_service.rb:14:in `call'
+app/controllers/ads_controller.rb:14:in `create'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 15:20:07 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+  [1m[36mUserSession Load (0.3ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:17:in `session'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:11:in `call'
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 13.1ms | Allocations: 10832)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/services/ads/create_service.rb:17:in `initialize'
+app/services/basic_service.rb:17:in `initialize'
+app/services/ads/create_service.rb:14:in `new'
+app/services/ads/create_service.rb:14:in `call'
+app/controllers/ads_controller.rb:14:in `create'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 15:21:26 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+  [1m[36mUserSession Load (0.2ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:17:in `session'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:11:in `call'
+Completed 201 Created in 14119ms (Views: 0.1ms | ActiveRecord: 5.4ms | Allocations: 29626)
+
+
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 15:21:59 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+  [1m[36mUserSession Load (0.2ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:17:in `session'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:11:in `call'
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 8.8ms | Allocations: 9377)
+
+
+  
+NoMethodError (undefined method `option' for Ads::CreateService:Class):
+  
+app/services/ads/create_service.rb:5:in `<class:CreateService>'
+app/services/ads/create_service.rb:2:in `<module:Ads>'
+app/services/ads/create_service.rb:1:in `<main>'
+app/controllers/ads_controller.rb:14:in `create'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 15:22:45 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+  [1m[36mUserSession Load (0.1ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:17:in `session'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:11:in `call'
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 10.4ms | Allocations: 9427)
+
+
+  
+NoMethodError (undefined method `option' for Ads::CreateService:Class):
+  
+app/services/ads/create_service.rb:5:in `<class:CreateService>'
+app/services/ads/create_service.rb:2:in `<module:Ads>'
+app/services/ads/create_service.rb:1:in `<main>'
+app/controllers/ads_controller.rb:14:in `create'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 15:26:24 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+  [1m[36mUserSession Load (0.2ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:17:in `session'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:11:in `call'
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms | Allocations: 2371)
+
+
+  
+NoMethodError (undefined method `option' for Ads::CreateService:Class):
+  
+app/services/ads/create_service.rb:5:in `<class:CreateService>'
+app/services/ads/create_service.rb:2:in `<module:Ads>'
+app/services/ads/create_service.rb:1:in `<main>'
+app/controllers/ads_controller.rb:14:in `create'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 15:26:55 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+  [1m[36mUserSession Load (0.2ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:17:in `session'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:11:in `call'
+Completed 500 Internal Server Error in 11224ms (ActiveRecord: 10.3ms | Allocations: 15552)
+
+
+  
+NoMethodError (undefined method `any?' for nil:NilClass):
+  
+app/services/basic_service.rb:37:in `failure?'
+app/services/basic_service.rb:33:in `success?'
+app/controllers/ads_controller.rb:16:in `create'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 15:27:16 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+  [1m[36mUserSession Load (0.3ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:17:in `session'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:11:in `call'
+Completed 500 Internal Server Error in 159255ms (ActiveRecord: 10.1ms | Allocations: 52271)
+
+
+  
+NoMethodError (undefined method `any?' for nil:NilClass):
+  
+app/services/basic_service.rb:37:in `failure?'
+app/services/basic_service.rb:33:in `success?'
+app/controllers/ads_controller.rb:16:in `create'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 15:30:00 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+  [1m[36mUserSession Load (0.2ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:17:in `session'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:11:in `call'
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 10.5ms | Allocations: 11076)
+
+
+  
+FastJsonapi::MandatoryField (id is a mandatory field in the jsonapi spec):
+  
+app/controllers/ads_controller.rb:18:in `create'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 15:31:42 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1005)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/services/basic_service.rb:3:in `call'
+app/controllers/concerns/auth.rb:14:in `auth_user'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 15:33:07 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 136)
+
+
+  
+NoMethodError (undefined method `pry_remtoe' for #<Binding:0x00007fc84c689298>):
+  
+app/controllers/concerns/auth.rb:14:in `auth_user'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 15:33:20 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+Completed 500 Internal Server Error in 60417ms (ActiveRecord: 0.0ms | Allocations: 22197)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/services/basic_service.rb:3:in `call'
+app/controllers/concerns/auth.rb:15:in `auth_user'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 15:34:23 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+Completed 500 Internal Server Error in 3739ms (ActiveRecord: 0.0ms | Allocations: 6580)
+
+
+  
+TypeError (no implicit conversion of Array into Hash):
+  
+app/services/basic_service.rb:4:in `call'
+app/controllers/concerns/auth.rb:15:in `auth_user'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 15:35:02 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 939)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/services/basic_service.rb:3:in `call'
+app/controllers/concerns/auth.rb:15:in `auth_user'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 15:35:44 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 821)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/services/basic_service.rb:3:in `call'
+app/controllers/concerns/auth.rb:15:in `auth_user'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 15:35:54 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+Completed 500 Internal Server Error in 58717ms (ActiveRecord: 0.0ms | Allocations: 15504)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/services/basic_service.rb:3:in `call'
+app/controllers/concerns/auth.rb:15:in `auth_user'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 15:36:55 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 946)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/services/basic_service.rb:23:in `initialize'
+app/controllers/concerns/auth.rb:15:in `new'
+app/controllers/concerns/auth.rb:15:in `auth_user'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 15:37:14 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 946)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/services/basic_service.rb:23:in `initialize'
+app/controllers/concerns/auth.rb:15:in `new'
+app/controllers/concerns/auth.rb:15:in `auth_user'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 15:37:28 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 944)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/services/basic_service.rb:23:in `initialize'
+app/controllers/concerns/auth.rb:15:in `new'
+app/controllers/concerns/auth.rb:15:in `auth_user'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 15:38:30 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+Completed 500 Internal Server Error in 83566ms (ActiveRecord: 0.0ms | Allocations: 23893)
+
+
+  
+DRb::DRbConnError (druby://127.0.0.1:38401 - #<Errno::ECONNREFUSED: Connection refused - connect(2) for "127.0.0.1" port 38401>):
+  
+app/services/basic_service.rb:24:in `initialize'
+app/controllers/concerns/auth.rb:15:in `new'
+app/controllers/concerns/auth.rb:15:in `auth_user'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 15:40:43 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+Completed 500 Internal Server Error in 434137ms (ActiveRecord: 0.0ms | Allocations: 82419)
+
+
+  
+NoMethodError (undefined method `any?' for nil:NilClass):
+  
+app/services/basic_service.rb:39:in `failure?'
+app/services/basic_service.rb:35:in `success?'
+app/controllers/concerns/auth.rb:17:in `auth_user'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 15:48:00 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2534)
+
+
+  
+NoMethodError (undefined method `ads' for nil:NilClass):
+  
+app/services/ads/create_service.rb:16:in `call'
+app/services/basic_service.rb:22:in `call'
+app/services/basic_service.rb:4:in `call'
+app/controllers/ads_controller.rb:14:in `create'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 15:48:45 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+Completed 500 Internal Server Error in 28992ms (ActiveRecord: 0.0ms | Allocations: 19883)
+
+
+  
+NoMethodError (undefined method `ads' for nil:NilClass):
+  
+app/services/ads/create_service.rb:17:in `call'
+app/services/basic_service.rb:22:in `call'
+app/services/basic_service.rb:4:in `call'
+app/controllers/ads_controller.rb:14:in `create'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 15:49:42 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+Completed 500 Internal Server Error in 11256ms (ActiveRecord: 0.0ms | Allocations: 15276)
+
+
+  
+NoMethodError (undefined method `ads' for nil:NilClass):
+  
+app/services/ads/create_service.rb:17:in `call'
+app/services/basic_service.rb:22:in `call'
+app/services/basic_service.rb:4:in `call'
+app/controllers/ads_controller.rb:14:in `create'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 15:49:57 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+Completed 500 Internal Server Error in 2796ms (ActiveRecord: 0.0ms | Allocations: 5759)
+
+
+  
+NoMethodError (undefined method `ads' for nil:NilClass):
+  
+app/services/ads/create_service.rb:17:in `call'
+app/services/basic_service.rb:22:in `call'
+app/services/basic_service.rb:4:in `call'
+app/controllers/ads_controller.rb:14:in `create'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 15:50:25 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+Completed 500 Internal Server Error in 15125ms (ActiveRecord: 0.0ms | Allocations: 20034)
+
+
+  
+NoMethodError (undefined method `ads' for nil:NilClass):
+  
+app/services/ads/create_service.rb:17:in `call'
+app/services/basic_service.rb:23:in `call'
+app/services/basic_service.rb:4:in `call'
+app/controllers/ads_controller.rb:14:in `create'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 15:50:53 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+Completed 500 Internal Server Error in 43755ms (ActiveRecord: 0.0ms | Allocations: 40236)
+
+
+  
+NoMethodError (undefined method `ads' for nil:NilClass):
+  
+app/services/ads/create_service.rb:17:in `call'
+app/services/basic_service.rb:24:in `call'
+app/services/basic_service.rb:4:in `call'
+app/controllers/ads_controller.rb:14:in `create'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 15:52:25 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+Completed 500 Internal Server Error in 45523ms (ActiveRecord: 0.0ms | Allocations: 30356)
+
+
+  
+NoMethodError (undefined method `ads' for nil:NilClass):
+  
+app/services/ads/create_service.rb:17:in `call'
+app/services/basic_service.rb:22:in `call'
+app/services/basic_service.rb:4:in `call'
+app/controllers/ads_controller.rb:14:in `create'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 15:53:48 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+Completed 500 Internal Server Error in 9430ms (ActiveRecord: 0.0ms | Allocations: 13517)
+
+
+  
+NoMethodError (undefined method `ads' for nil:NilClass):
+  
+app/services/ads/create_service.rb:17:in `call'
+app/services/basic_service.rb:22:in `call'
+app/services/basic_service.rb:4:in `call'
+app/controllers/ads_controller.rb:14:in `create'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 15:54:02 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+Completed 500 Internal Server Error in 12556ms (ActiveRecord: 0.0ms | Allocations: 11377)
+
+
+  
+NoMethodError (undefined method `ads' for nil:NilClass):
+  
+app/services/ads/create_service.rb:17:in `call'
+app/services/basic_service.rb:22:in `call'
+app/services/basic_service.rb:4:in `call'
+app/controllers/ads_controller.rb:14:in `create'
+  [1m[36mUserSession Load (0.5ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" /* loading for pp */ LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/login" for 172.19.0.1 at 2023-12-11 15:55:56 +0000
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"test@email.com", "password"=>"[FILTERED]", "session"=>{"email"=>"test@email.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@email.com"], ["LIMIT", 1]]
+  ↳ app/services/user_sessions/create_service.rb:7:in `block in <class:CreateService>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/user_sessions/create_service.rb:24:in `create_session'
+  [1m[36mUserSession Create (1.5ms)[0m  [1m[32mINSERT INTO "user_sessions" ("uuid", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uuid", "07b046a6-c8a4-46eb-a8d4-6664567e82e5"], ["user_id", 3], ["created_at", "2023-12-11 15:55:57.097882"], ["updated_at", "2023-12-11 15:55:57.097882"]]
+  ↳ app/services/user_sessions/create_service.rb:24:in `create_session'
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/user_sessions/create_service.rb:24:in `create_session'
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+Completed 201 Created in 281ms (Views: 0.2ms | ActiveRecord: 19.2ms | Allocations: 14783)
+
+
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 15:56:08 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+  [1m[36mUserSession Load (0.8ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:18:in `session'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:12:in `call'
+Completed 422 Unprocessable Entity in 47046ms (Views: 0.3ms | ActiveRecord: 1.1ms | Allocations: 38961)
+
+
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 15:57:00 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+  [1m[36mUserSession Load (0.5ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:18:in `session'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:12:in `call'
+Completed 422 Unprocessable Entity in 5807ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 6625)
+
+
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 15:59:23 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 987)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/services/basic_service.rb:3:in `call'
+app/controllers/concerns/auth.rb:14:in `auth_user'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 15:59:49 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+  [1m[36mUserSession Load (0.4ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:18:in `session'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:12:in `call'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/ads/create_service.rb:17:in `call'
+  [1m[36mAd Create (2.1ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "city", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Title"], ["description", "Descripotion"], ["city", "Екатеринбург"], ["user_id", 3], ["created_at", "2023-12-11 16:00:43.660487"], ["updated_at", "2023-12-11 16:00:43.660487"]]
+  ↳ app/services/ads/create_service.rb:17:in `call'
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/ads/create_service.rb:17:in `call'
+[ActiveJob] Enqueued Ads::GeocodingJob (Job ID: e6f0e842-485f-454c-b3f3-b451be475c77) to Async(default) with arguments: #<GlobalID:0x00007fc84c4c7068 @uri=#<URI::GID gid://ads/Ad/4>>
+Completed 201 Created in 54582ms (Views: 0.2ms | ActiveRecord: 19.4ms | Allocations: 97355)
+
+
+[ActiveJob] [Ads::GeocodingJob] [e6f0e842-485f-454c-b3f3-b451be475c77]   [1m[36mAd Load (0.3ms)[0m  [1m[34mSELECT "ads".* FROM "ads" WHERE "ads"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[ActiveJob] [Ads::GeocodingJob] [e6f0e842-485f-454c-b3f3-b451be475c77] Performing Ads::GeocodingJob (Job ID: e6f0e842-485f-454c-b3f3-b451be475c77) from Async(default) enqueued at 2023-12-11T16:00:43.697777856Z with arguments: #<GlobalID:0x00007fc84f6faa80 @uri=#<URI::GID gid://ads/Ad/4>>
+[ActiveJob] [Ads::GeocodingJob] [e6f0e842-485f-454c-b3f3-b451be475c77]   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [Ads::GeocodingJob] [e6f0e842-485f-454c-b3f3-b451be475c77]   ↳ app/jobs/ads/geocoding_job.rb:9:in `perform'
+[ActiveJob] [Ads::GeocodingJob] [e6f0e842-485f-454c-b3f3-b451be475c77]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[ActiveJob] [Ads::GeocodingJob] [e6f0e842-485f-454c-b3f3-b451be475c77]   ↳ app/jobs/ads/geocoding_job.rb:9:in `perform'
+[ActiveJob] [Ads::GeocodingJob] [e6f0e842-485f-454c-b3f3-b451be475c77]   [1m[36mAd Update (1.4ms)[0m  [1m[33mUPDATE "ads" SET "lat" = $1, "lon" = $2, "updated_at" = $3 WHERE "ads"."id" = $4[0m  [["lat", 56.8385216], ["lon", 60.6054911], ["updated_at", "2023-12-11 16:00:43.932916"], ["id", 4]]
+[ActiveJob] [Ads::GeocodingJob] [e6f0e842-485f-454c-b3f3-b451be475c77]   ↳ app/jobs/ads/geocoding_job.rb:9:in `perform'
+[ActiveJob] [Ads::GeocodingJob] [e6f0e842-485f-454c-b3f3-b451be475c77]   [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [Ads::GeocodingJob] [e6f0e842-485f-454c-b3f3-b451be475c77]   ↳ app/jobs/ads/geocoding_job.rb:9:in `perform'
+[ActiveJob] [Ads::GeocodingJob] [e6f0e842-485f-454c-b3f3-b451be475c77] Performed Ads::GeocodingJob (Job ID: e6f0e842-485f-454c-b3f3-b451be475c77) from Async(default) in 161.96ms
+Started GET "/" for 172.19.0.1 at 2023-12-11 16:01:04 +0000
+Processing by AdsController#index as */*
+  [1m[36mAd Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "ads"[0m
+  ↳ app/controllers/concerns/pagination_links.rb:3:in `pagination_links'
+  [1m[36mAd Load (0.3ms)[0m  [1m[34mSELECT "ads".* FROM "ads" ORDER BY "ads"."updated_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/controllers/ads_controller.rb:10:in `index'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 2857)
+
+
+Started GET "/" for 172.19.0.1 at 2023-12-11 16:28:41 +0000
+Processing by AdsController#index as */*
+  [1m[36mAd Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "ads"[0m
+  ↳ app/controllers/concerns/pagination_links.rb:3:in `pagination_links'
+  [1m[36mAd Load (0.3ms)[0m  [1m[34mSELECT "ads".* FROM "ads" ORDER BY "ads"."updated_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/controllers/ads_controller.rb:10:in `index'
+Completed 200 OK in 26ms (Views: 0.1ms | ActiveRecord: 5.7ms | Allocations: 9685)
+
+
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 16:28:51 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 954)
+
+
+  
+NoMethodError (undefined method `symbolize_keys' for ["d88d3456-ef62-412b-bb46-ec7e0f8b0c67"]:Array):
+  
+app/services/basic_service.rb:17:in `initialize'
+app/services/basic_service.rb:4:in `new'
+app/services/basic_service.rb:4:in `call'
+app/controllers/concerns/auth.rb:14:in `auth_user'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 16:33:51 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+  [1m[36mUserSession Load (0.4ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:17:in `session'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:11:in `call'
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 8.1ms | Allocations: 13469)
+
+
+  
+NoMethodError (undefined method `symbolize_keys' for #<ActionController::Parameters {"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"} permitted: true>):
+  
+app/controllers/ads_controller.rb:30:in `ad_params'
+app/controllers/ads_controller.rb:15:in `create'
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 16:34:02 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+  [1m[36mUserSession Load (0.2ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:17:in `session'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:11:in `call'
+Completed 422 Unprocessable Entity in 20ms (Views: 0.1ms | ActiveRecord: 5.1ms | Allocations: 10802)
+
+
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 16:34:31 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+  [1m[36mUserSession Load (0.3ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:17:in `session'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:11:in `call'
+Completed 422 Unprocessable Entity in 90876ms (Views: 0.3ms | ActiveRecord: 5.1ms | Allocations: 79052)
+
+
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 16:37:51 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+  [1m[36mUserSession Load (0.5ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:17:in `session'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:11:in `call'
+Completed 422 Unprocessable Entity in 22433ms (Views: 0.3ms | ActiveRecord: 6.4ms | Allocations: 69195)
+
+
+Started POST "/ads" for 172.19.0.1 at 2023-12-11 16:38:35 +0000
+Processing by AdsController#create as */*
+  Parameters: {"ad"=>{"title"=>"Title", "description"=>"Descripotion", "city"=>"Екатеринбург"}}
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <module:JwtEncoder> at /app/app/lib/jwt_encoder.rb:4)
+  [1m[36mUserSession Load (0.3ms)[0m  [1m[34mSELECT "user_sessions".* FROM "user_sessions" WHERE "user_sessions"."uuid" = $1 LIMIT $2[0m  [["uuid", "d88d3456-ef62-412b-bb46-ec7e0f8b0c67"], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:17:in `session'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/auth/fetch_user_service.rb:11:in `call'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/ads/create_service.rb:17:in `call'
+  [1m[36mAd Create (1.7ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "city", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Title"], ["description", "Descripotion"], ["city", "Екатеринбург"], ["user_id", 3], ["created_at", "2023-12-11 16:39:07.138239"], ["updated_at", "2023-12-11 16:39:07.138239"]]
+  ↳ app/services/ads/create_service.rb:17:in `call'
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/ads/create_service.rb:17:in `call'
+[ActiveJob] Enqueued Ads::GeocodingJob (Job ID: 708898c3-233f-45e9-ad4f-5e5cafb5e527) to Async(default) with arguments: #<GlobalID:0x00007fc851574ee8 @uri=#<URI::GID gid://ads/Ad/5>>
+Completed 201 Created in 31549ms (Views: 0.1ms | ActiveRecord: 14.0ms | Allocations: 70681)
+
+
+[ActiveJob] [Ads::GeocodingJob] [708898c3-233f-45e9-ad4f-5e5cafb5e527]   [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads" WHERE "ads"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[ActiveJob] [Ads::GeocodingJob] [708898c3-233f-45e9-ad4f-5e5cafb5e527] Performing Ads::GeocodingJob (Job ID: 708898c3-233f-45e9-ad4f-5e5cafb5e527) from Async(default) enqueued at 2023-12-11T16:39:07.151006934Z with arguments: #<GlobalID:0x00007fc84c6cbc88 @uri=#<URI::GID gid://ads/Ad/5>>
+[ActiveJob] [Ads::GeocodingJob] [708898c3-233f-45e9-ad4f-5e5cafb5e527]   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [Ads::GeocodingJob] [708898c3-233f-45e9-ad4f-5e5cafb5e527]   ↳ app/jobs/ads/geocoding_job.rb:9:in `perform'
+[ActiveJob] [Ads::GeocodingJob] [708898c3-233f-45e9-ad4f-5e5cafb5e527]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[ActiveJob] [Ads::GeocodingJob] [708898c3-233f-45e9-ad4f-5e5cafb5e527]   ↳ app/jobs/ads/geocoding_job.rb:9:in `perform'
+[ActiveJob] [Ads::GeocodingJob] [708898c3-233f-45e9-ad4f-5e5cafb5e527]   [1m[36mAd Update (0.5ms)[0m  [1m[33mUPDATE "ads" SET "lat" = $1, "lon" = $2, "updated_at" = $3 WHERE "ads"."id" = $4[0m  [["lat", 56.8385216], ["lon", 60.6054911], ["updated_at", "2023-12-11 16:39:07.370045"], ["id", 5]]
+[ActiveJob] [Ads::GeocodingJob] [708898c3-233f-45e9-ad4f-5e5cafb5e527]   ↳ app/jobs/ads/geocoding_job.rb:9:in `perform'
+[ActiveJob] [Ads::GeocodingJob] [708898c3-233f-45e9-ad4f-5e5cafb5e527]   [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [Ads::GeocodingJob] [708898c3-233f-45e9-ad4f-5e5cafb5e527]   ↳ app/jobs/ads/geocoding_job.rb:9:in `perform'
+[ActiveJob] [Ads::GeocodingJob] [708898c3-233f-45e9-ad4f-5e5cafb5e527] Performed Ads::GeocodingJob (Job ID: 708898c3-233f-45e9-ad4f-5e5cafb5e527) from Async(default) in 138.89ms
+Started GET "/" for 172.19.0.1 at 2023-12-11 16:39:25 +0000
+Processing by AdsController#index as */*
+  [1m[36mAd Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "ads"[0m
+  ↳ app/controllers/concerns/pagination_links.rb:3:in `pagination_links'
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads" ORDER BY "ads"."updated_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/controllers/ads_controller.rb:10:in `index'
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 3.3ms | Allocations: 7184)
+
+
