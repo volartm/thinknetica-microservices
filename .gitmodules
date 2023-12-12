@@ -1,6 +1,6 @@
 [submodule "containers"]
 	path = containers
 	url = git@github.com:volartm/containers.git
-[submodule "thinknetica-microservices"]
-	path = containers
-	url = git@github.com:volartm/thinknetica-microservices.git
+[submodule "composer-files"]
+	path = composer-files
+	url = git@github.com:volartm/composer-files.git
