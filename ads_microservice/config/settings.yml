@@ -1,0 +1,6 @@
+db:
+  adapter: postgresqsl
+  host: localhost
+  usr: postgres
+pagination:
+  page_size: 10

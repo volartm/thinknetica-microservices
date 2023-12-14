@@ -9,7 +9,7 @@ checkout_pull:
 
 common_compose_params=--env-file ./.env -f composer-files/docker-compose.common.yml \
                                  -f composer-files/docker-compose.db.yml
-apps_compose_params=-f ads_monolit/docker-compose.yml
+apps_compose_params=-f ads_monolit/docker-compose.yml -f ads_microservice/docker-compose.yml
 
 build:
 	docker-compose ${common_compose_params} ${apps_compose_params} build

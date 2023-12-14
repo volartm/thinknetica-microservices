@@ -1,0 +1,13 @@
+version: "3"
+services:
+  ads_microservice_app:
+    extends:
+      file: ../composer-files/docker-compose.common_services.yml
+      service: app
+    ports:
+      - "127.0.0.1:4010:5000"
+    env_file:
+      - ../ads_microservice/.env
+    volumes:
+      - ../ads_microservice/:/apps/ads_microservice/
+    working_dir: /apps/ads_microservice
