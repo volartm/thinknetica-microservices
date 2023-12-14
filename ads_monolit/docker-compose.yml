@@ -12,5 +12,6 @@ services:
     env_file:
       - ../ads_monolit/.env
     volumes:
-      - ../ads_monolit/:/app
-      - ../ads_monolit/public/:/app/public
+      - ../ads_monolit/:/apps/ads_monolit/
+      - ../ads_monolit/public/:/apps/public
+    working_dir: /apps/ads_monolit
