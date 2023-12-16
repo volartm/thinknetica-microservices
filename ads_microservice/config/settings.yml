@@ -1,5 +1,5 @@
 db:
-  adapter: postgresqsl
+  adapter: postgres
   host: localhost
   usr: postgres
 pagination:
