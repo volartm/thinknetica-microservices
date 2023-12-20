@@ -16,11 +16,12 @@ module ApplicationLoader
 
   def init_db
     require_file 'config/initializers/db'
-    require_dir 'app'
   end
 
   def require_app
     require_file 'config/application'
+    require_file 'app/services/basic_service'
+    require_dir 'app'
   end
 
   def init_app
