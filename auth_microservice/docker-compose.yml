@@ -1,0 +1,13 @@
+version: "3"
+services:
+  auth_microservice_app:
+    extends:
+      file: ../composer-files/docker-compose.common_services.yml
+      service: app
+    ports:
+      - "127.0.0.1:4020:5000"
+    env_file:
+      - ../auth_microservice/.env
+    volumes:
+      - ../auth_microservice/:/apps/auth_microservice/
+    working_dir: /apps/auth_microservice
