@@ -1,4 +1,4 @@
 /.idea/
 /.env
 /ads_monolit/tmp/*
-/ads_microservice/.env
+/*/.env
