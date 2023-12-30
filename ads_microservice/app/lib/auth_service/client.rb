@@ -1,16 +1,19 @@
 require 'dry/initializer'
+require_relative 'api'
 
 module AuthService
   class Client
-    extend Dry::Initializer
+    extend Dry::Initializer[undefined: false]
+    include Api
 
-    option :url, default: proc { 'http:localhost:3010/v1'}
+    option :url, default: proc { 'http://auth_microservice_app:5000/v1'}
     option :connection, default: proc { build_connection }
 
     def build_connection
-      Faradey.new(@url) do |conn|
+      Faraday.new(@url) do |conn|
         conn.request :json
-        conn.adapter Faradey.default_adapter
+        conn.response :json, content_type: /\bjson$/
+        conn.adapter Faraday.default_adapter
       end
     end
   end
