@@ -8,7 +8,7 @@ checkout_pull:
 	git pull --recurse-submodules
 
 common_compose_params=--env-file ./.env -f composer-files/docker-compose.common.yml \
-                                 -f composer-files/docker-compose.db.yml
+                                 -f composer-files/docker-compose.db.yml -f composer-files/docker-compose.rabbitmq.yml
 apps_compose_params=-f ads_monolit/docker-compose.yml -f ads_microservice/docker-compose.yml -f auth_microservice/docker-compose.yml
 
 build:
