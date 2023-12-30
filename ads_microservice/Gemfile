@@ -29,5 +29,7 @@ group :test, :development do
   gem 'factory_bot', '~> 5.2.0'
   gem 'rack-test', '~> 1.1.0'
   gem 'database_cleaner-sequel', '~> 1.8.0'
+  gem 'pry-rescue'
+  gem 'pry-remote'
 end
 
