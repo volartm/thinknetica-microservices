@@ -5,7 +5,7 @@ module RabbitMq
 
   def connection
     @mutex.synchronize do
-      @connection ||= Bunny.new.start
+      @connection ||= Bunny.new('amqp://guest:guest@rabbit1:5672').start
     end
   end
 

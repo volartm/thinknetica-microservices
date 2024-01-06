@@ -5,13 +5,21 @@ checkout_pull:
 	git submodule foreach --recursive git fetch --all && \
 	git submodule foreach --recursive git stash && \
 	git submodule foreach --recursive git checkout -B $${branch} && \
-	git pull --recurse-submodules
+	git pull --recurse-submodules && \
+	git submodule update --init --recursive
 
-common_compose_params=--env-file ./.env -f composer-files/docker-compose.common.yml \
-                                 -f composer-files/docker-compose.db.yml -f composer-files/docker-compose.rabbitmq.yml
-apps_compose_params=-f ads_monolit/docker-compose.yml -f ads_microservice/docker-compose.yml \
-                                                      -f auth_microservice/docker-compose.yml \
-                                                      -f geocoder_microservice/docker-compose.yml
+
+common_compose_params=--env-file composer-files/.db.docker_compose.env \
+                      --env-file composer-files/rabbitmq/3.11/.docker_compose.env \
+                      --env-file ./.env \
+                      -f composer-files/docker-compose.common.yml \
+                      -f composer-files/docker-compose.db.yml \
+                      -f composer-files/rabbitmq/3.11/docker-compose.yml
+
+apps_compose_params=-f ads_monolit/docker-compose.yml \
+                    -f ads_microservice/docker-compose.yml \
+                    -f auth_microservice/docker-compose.yml \
+                    -f geocoder_microservice/docker-compose.yml
 
 build:
 	docker-compose ${common_compose_params} ${apps_compose_params} build
@@ -23,7 +31,7 @@ up-services:
 	docker-compose ${common_compose_params} up db
 
 up-all: ##
-	docker-compose ${common_compose_params} ${apps_compose_params} up
+	docker compose ${common_compose_params} ${apps_compose_params} up
 
 up-db: ##
 	docker-compose ${common_compose_params} up db
