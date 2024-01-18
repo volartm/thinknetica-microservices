@@ -5,8 +5,7 @@ class Application < Sinatra::Base
     register Sinatra::Namespace
     register ApiErrors
 
-    set :app_file, File.expand_path('../config.ru',
-                                    __dir__)
+    set :app_file, File.expand_path('../config.ru', __dir__)
   end
 
   configure :development do
