@@ -5,7 +5,7 @@ module RabbitMq
 
   def connection
     @mutex.synchronize do
-      @connection ||= Bunny.new('amqp://guest:guest@rabbit1:5672').start
+      @connection ||= Bunny.new(connection_uri).start
     end
   end
 
@@ -21,4 +21,26 @@ module RabbitMq
         Settings.rabbitmq.consumer_pool
       )
   end
+
+  def connection_uri
+    "amqp://#{user}:#{password}@#{hostname}:#{port}"
+  end
+
+  def user
+    @user ||= ENV.fetch('RABBITMQ_DEFAULT_USER')
+  end
+
+  def password
+    @password ||= ENV.fetch('RABBITMQ_DEFAULT_PASSWORD')
+  end
+
+  def hostname
+    @hostname ||= ENV.fetch('RABBITMQ_HOST_NAME')
+  end
+
+  def port
+    @port ||= ENV.fetch('RABBITMQ_PORT')
+  end
+
+  private :connection_uri, :password
 end

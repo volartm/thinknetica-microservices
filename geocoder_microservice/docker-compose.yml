@@ -8,6 +8,7 @@ services:
       - "127.0.0.1:4030:5000"
     env_file:
       - ../auth_microservice/.env
+      - ../composer-files/rabbitmq/3.11/.docker_compose.env
     volumes:
       - ../geocoder_microservice/:/apps/geocoder_microservice/
     working_dir: /apps/geocoder_microservice

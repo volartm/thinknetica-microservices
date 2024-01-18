@@ -9,17 +9,17 @@ module Ads
     end
 
     option :user_id
+    option :geocode_service, default: proc { GeocoderService::Client.new}
 
     attr_reader :ad
 
     def call
-      # @ad = @user.ads.new(@ad.to_h)
-      # return fail!(@ad.errors) unless @ad.save
       @ad = ::Ad.new(@ad.to_h)
       @ad.user_id = @user_id
 
       if @ad.valid?
         @ad.save
+        @geocode_service.geocode_later(@ad)
       else
         fail!(@ad.errors)
       end

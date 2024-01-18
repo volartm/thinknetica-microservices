@@ -1,2 +1,4 @@
 db:
   database: ads_microservice_development
+rabbitmq:
+  consumer_pool: 10
