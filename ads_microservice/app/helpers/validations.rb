@@ -1,6 +1,5 @@
 module Validations
-  class InvalidParams < StandardError
-  end
+  class InvalidParams < StandardError; end
 
   def validate_with!(validation)
     result = validate_with(validation)

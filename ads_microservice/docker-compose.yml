@@ -8,6 +8,7 @@ services:
       - "127.0.0.1:4010:5000"
     env_file:
       - ../ads_microservice/.env
+      - ../composer-files/rabbitmq/3.11/.docker_compose.env
     volumes:
       - ../ads_microservice/:/apps/ads_microservice/
     working_dir: /apps/ads_microservice
