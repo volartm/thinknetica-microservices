@@ -1,4 +1,3 @@
-/.idea/
-/.env
+/**/.idea/
 /ads_monolit/tmp/*
-/*/.env
+/**/.env
