@@ -1,4 +1,14 @@
+app:
+  name: ads
 db:
   database: ads_microservice_development
 rabbitmq:
   consumer_pool: 10
+pagination:
+  page_size: 10
+#service:
+#  auth:
+#    url: http://localhost:3010/v1
+logger:
+  path: log/app.log
+  level: info
