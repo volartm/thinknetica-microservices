@@ -1,8 +1,15 @@
 /**/.idea/
 /ads_monolit/tmp/*
 /**/.env
+
 /ads_microservice/log/*
 !/ads_microservice/log/.keep
 
+/geocoder_microservice/log/*
+!/geocoder_microservice/log/.keep
+
 /ads_microservice/config/settings.local.yml
 /ads_microservice/config/settings/*.local.yml
+
+/geocoder_microservice/config/settings.local.yml
+/geocoder_microservice/config/settings/*.local.yml
