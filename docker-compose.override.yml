@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  filebeat:
+    volumes:
+      - ../configs/filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml
+      - ../ads_microservice/log:/var/log/ads:ro
+      - ../geocoder_microservice/log:/var/log/geocoder:ro
+volumes:
+  filebeat:

@@ -11,33 +11,39 @@ checkout_pull:
 
 common_compose_params=--env-file composer-files/.db.docker_compose.env \
                       --env-file composer-files/rabbitmq/3.11/.docker_compose.env \
+                      --env-file composer-files/elasticsearch/8.12.0/.docker_compose.env \
                       --env-file ./.env \
                       -f composer-files/docker-compose.common.yml \
                       -f composer-files/docker-compose.db.yml \
-                      -f composer-files/rabbitmq/3.11/docker-compose.yml
+                      -f composer-files/rabbitmq/3.11/docker-compose.yml \
+                      -f composer-files/elasticsearch/8.12.0/docker-compose.yml \
+                      -f composer-files/kibana/8.12.0/docker-compose.yml \
+                      -f composer-files/filebeat/7.6.0/docker-compose.yml
 
 apps_compose_params=-f ads_monolit/docker-compose.yml \
                     -f ads_microservice/docker-compose.yml \
                     -f auth_microservice/docker-compose.yml \
                     -f geocoder_microservice/docker-compose.yml
 
+override_compose_params=-f docker-compose.override.yml
+
 build:
-	docker-compose ${common_compose_params} ${apps_compose_params} build
+	docker-compose ${common_compose_params} ${apps_compose_params} ${override_compose_params} build
 
 rebuild:
-	docker-compose ${common_compose_params} ${apps_compose_params} build --no-cache
+	docker-compose ${common_compose_params} ${apps_compose_params} ${override_compose_params} build --no-cache
 
 up-services:
-	docker-compose ${common_compose_params} up db
+	docker-compose ${common_compose_params} ${override_compose_params} up db
 
 up-all: ##
-	docker compose ${common_compose_params} ${apps_compose_params} up
+	docker compose ${common_compose_params} ${apps_compose_params} ${override_compose_params} up
 
 up-db: ##
-	docker-compose ${common_compose_params} up db
+	docker-compose ${common_compose_params} ${override_compose_params} up db
 
 down: ##
-	docker-compose ${common_compose_params} down --remove-orphans
+	docker-compose ${common_compose_params} ${apps_compose_params} ${override_compose_params} down --remove-orphans
 
 up-builder: ##
 	docker-compose --env-file ./.env -f docker-compose.builder.yml up
