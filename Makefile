@@ -15,6 +15,7 @@ common_compose_params=--env-file composer-files/.db.docker_compose.env \
                       --env-file ./.env \
                       -f composer-files/docker-compose.common.yml \
                       -f composer-files/docker-compose.db.yml \
+                      -f composer-files/nginx/docker-compose.yml \
                       -f composer-files/rabbitmq/3.11/docker-compose.yml \
                       -f composer-files/elasticsearch/8.12.0/docker-compose.yml \
                       -f composer-files/kibana/8.12.0/docker-compose.yml \
